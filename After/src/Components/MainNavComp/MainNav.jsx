@@ -1,7 +1,7 @@
 import './MainNav.scss'
 import {NavLink} from 'react-router-dom'
 
-import logo from '../Assets/logo.png'
+import logo from '../../Assets/logo.png'
 
 export function MainNav(){
 
