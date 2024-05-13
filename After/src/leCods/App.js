@@ -12,9 +12,9 @@ function App() {
     <Router>
       <MainNav/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path ='/createEmployee' element={<CreateEmployee/>}/>
-        <Route path='/employeeList' element={<EmployeeList/>}/>
+        <Route to='./' Component={<Home/>}/>
+        <Route to ='./createEmployee' Component={<CreateEmployee/>}/>
+        <Route to='./employeeList' Component={<EmployeeList/>}/>
       </Routes>
     </Router>
     <div className="App">
