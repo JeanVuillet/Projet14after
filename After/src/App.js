@@ -1,5 +1,5 @@
 
-import './App.css';
+import './app.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './Pages/HomePage/Home';
 import { EmployeeList } from './Pages/EmployeeListPage/EmployeeList';
@@ -8,7 +8,7 @@ import { MainNav } from './Components/MainNavComp/MainNav';
 
 function App() {
   return (
-    <>
+    <div className='App'>
     <Router>
       <MainNav/>
       <Routes>
@@ -17,10 +17,8 @@ function App() {
         <Route path='/employeeList' element={<EmployeeList/>}/>
       </Routes>
     </Router>
-    <div className="App">
-      
     </div>
-    </>
+
   );
 }
 

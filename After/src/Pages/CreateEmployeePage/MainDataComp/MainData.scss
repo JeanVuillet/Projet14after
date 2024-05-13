@@ -1,0 +1,46 @@
+.mainData{
+    border:solid;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+    label {
+        display: flex;
+        width: 80%;
+    }
+    input {width: 80%;}
+    .firstName{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap:10px;
+
+    }
+
+
+    .lastName{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap:10px;
+
+    }
+    .dateOfBirth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap:10px;
+    }
+    .startDate{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap:10px;
+    }
+}

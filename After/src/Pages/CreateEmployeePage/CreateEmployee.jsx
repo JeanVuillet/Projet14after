@@ -8,7 +8,7 @@ export function CreateEmployee(){
         const firstName = useRef(null);
         const lastName = useRef(null);
         const dateOfBirth = useRef(null);
-        const starteData = useRef(null);
+        const starteDate = useRef(null);
         const street= useRef(null);
         const city=useRef(null);
         const state=useRef(null);
@@ -19,7 +19,7 @@ export function CreateEmployee(){
                 firstName: firstName.current.value,
                 lastName: lastName.current.value,
                 dateOfBirth: dateOfBirth.current.value,
-                stateData: starteData.current.value,
+                stateData: starteDate.current.value,
                 street:street.current.value,
                 city:city.current.value,
                 state:state.current.value,
@@ -30,10 +30,11 @@ export function CreateEmployee(){
 
     
     return(
-        <>
+     
         <div className="createEmployee">Create Employee
+        <div className="emplyeDiv">
         <form className='form'>
-    <MainData firstName={firstName} lastName={lastName} dateOfBirth={dateOfBirth} stateData={starteData}/>
+    <MainData firstName={firstName} lastName={lastName} dateOfBirth={dateOfBirth} stateDate={starteDate}/>
     <Address street={street} city={city} state={state} zip={zip}/>
     <div className="departement">
         <label htmlFor="departement">Departement</label>
@@ -42,6 +43,7 @@ export function CreateEmployee(){
         </form>
         <button onClick={()=>console.log(getData())}> validate</button>
         </div>
-        </>
+        </div>
+   
     )
 }

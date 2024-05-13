@@ -4,8 +4,10 @@ import './Address.scss'
 export function Address({street,city, state, zip }){
 
     return(
-        <div className="address"> 
-        <p className='section'>Adress</p>
+        <div className="adress">
+        <p className='adressTitle'>Adress</p>
+        <div className="addressContent"> 
+
             <div className="street">
             <label htmlFor='street'>Street</label>
             <input id='street' ref={street}></input>
@@ -23,5 +25,7 @@ export function Address({street,city, state, zip }){
                 <input type="text" id='zip' ref={zip}/>
             </div>
         </div>
+        </div>
+     
     )
 }

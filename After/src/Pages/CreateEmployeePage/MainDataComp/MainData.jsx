@@ -1,7 +1,7 @@
 import './MainData.scss';
 
 
-export function MainData({firstName, lastName,dateOfBirth, starteData}) {
+export function MainData({firstName, lastName,dateOfBirth, starteDate}) {
 
 
     return (
@@ -18,9 +18,9 @@ export function MainData({firstName, lastName,dateOfBirth, starteData}) {
                 <label htmlFor='dateOfBirth' placeholder='mm/dd/yyyy' >Date of Birth</label>
                 <input type="text" id='dateOfBirth' ref={dateOfBirth}/>
             </div>
-            <div className="startData">
-                <label htmlFor='startData' placeholder='mm/dd/yyyy' >Start Date</label>
-                <input type="text" id='stateData' ref={starteData}/>
+            <div className="startDate">
+                <label htmlFor='startDate' placeholder='mm/dd/yyyy' >Start Date</label>
+                <input type="text" id='stateDate' ref={starteDate}/>
             </div>
         </div>
     );
