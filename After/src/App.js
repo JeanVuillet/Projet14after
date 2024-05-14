@@ -5,10 +5,14 @@ import { Home } from './Pages/HomePage/Home';
 import { EmployeeList } from './Pages/EmployeeListPage/EmployeeList';
 import { CreateEmployee } from './Pages/CreateEmployeePage/CreateEmployee';
 import { MainNav } from './Components/MainNavComp/MainNav';
+import { Provider } from 'react-redux';
+import {store} from './store.js'
 
 function App() {
   return (
+
     <div className='App'>
+
     <Router>
       <MainNav/>
       <Routes>
@@ -17,7 +21,10 @@ function App() {
         <Route path='/employeeList' element={<EmployeeList/>}/>
       </Routes>
     </Router>
+
     </div>
+    
+
 
   );
 }

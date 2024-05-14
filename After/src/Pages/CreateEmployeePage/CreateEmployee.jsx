@@ -2,12 +2,14 @@ import './CreateEmployee.scss'
 import { MainData } from './MainDataComp/MainData.jsx'
 import { Address } from './AddressComp/Address.jsx';
 import { useRef } from 'react';
-export function CreateEmployee(){
 
+export function CreateEmployee(){
+// const dispatch=useDispatch();
 
         const firstName = useRef(null);
         const lastName = useRef(null);
         const dateOfBirth = useRef(null);
+        const stateData=useRef(null)
         const starteDate = useRef(null);
         const street= useRef(null);
         const city=useRef(null);
@@ -19,7 +21,7 @@ export function CreateEmployee(){
                 firstName: firstName.current.value,
                 lastName: lastName.current.value,
                 dateOfBirth: dateOfBirth.current.value,
-                stateData: starteDate.current.value,
+                stateData: stateData.cirremt.value,
                 street:street.current.value,
                 city:city.current.value,
                 state:state.current.value,
@@ -28,6 +30,10 @@ export function CreateEmployee(){
             };
         }
 
+        function createUser(){
+const newUser= getData();
+
+        }
     
     return(
      
@@ -35,13 +41,13 @@ export function CreateEmployee(){
         <div className="emplyeDiv">
         <form className='form'>
     <MainData firstName={firstName} lastName={lastName} dateOfBirth={dateOfBirth} stateDate={starteDate}/>
-    <Address street={street} city={city} state={state} zip={zip}/>
+    <Address stateData={stateData} street={street} city={city} state={state} zip={zip}/>
     <div className="departement">
         <label htmlFor="departement">Departement</label>
         <input type="text" id='departement' ref={departement}/>
     </div>
         </form>
-        <button onClick={()=>console.log(getData())}> validate</button>
+        <button onClick={createUser}> validate</button>
         </div>
         </div>
    

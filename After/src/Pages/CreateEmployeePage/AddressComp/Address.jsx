@@ -1,7 +1,7 @@
 import './Address.scss'
 
 
-export function Address({street,city, state, zip }){
+export function Address({ street,city, state, zip }){
 
     return(
         <div className="adress">
