@@ -1,15 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-
 import { createSlice } from "@reduxjs/toolkit";
 
 export const mySlice = createSlice({
   name: "userSlice",
-  initialState: {},
+  initialState: { user: [] }, // Note: "user" au lieu de "users"
   reducers: {
     addUser: (currentState, action) => {
-      {
-        return { ...currentState, ...action.payload };
-      }
+      console.log(currentState);
+      return { 
+        ...currentState, user: [...currentState.user, action.payload] // Crée une copie du tableau avec le nouvel utilisateur
+      };
     },
   },
 });
@@ -23,6 +23,5 @@ const store = configureStore({
     userSlice: mySlice.reducer,
   },
 });
-// Ajoutez ici d'autres options de configuration du store si nécessaire
 
 export { store };

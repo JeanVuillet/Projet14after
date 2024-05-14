@@ -7,7 +7,15 @@ export function EmployeeList(){
     return(
         <div className="employeeList">
             <p className='title'>employee list</p>
-      {user? user.firstName:null}
+
+
+            <ul>
+            <li> {user? user.user[0].firstName:null}</li>
+            <li> {user? user.user[1].firstName:null}</li>
+            <li> {user? user.user[2].firstName:null}</li>
+            <li> {user? user.user[3].firstName:null}</li>
+            </ul>
+     
         <div className="list">
 
         </div>
