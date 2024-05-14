@@ -3,22 +3,18 @@ import { useSelector } from 'react-redux'
 import { getUser } from '../../store'
 
 export function EmployeeList(){
-    const user=useSelector(getUser);
+    const users = useSelector(getUser);
+    const userList=users.user;
+
     return(
         <div className="employeeList">
-            <p className='title'>employee list</p>
-
+            <p className='title'>Employee List</p>
 
             <ul>
-            <li> {user? user.user[0].firstName:null}</li>
-            <li> {user? user.user[1].firstName:null}</li>
-            <li> {user? user.user[2].firstName:null}</li>
-            <li> {user? user.user[3].firstName:null}</li>
+                {userList.map((user, index) => (
+                    <li key={index}>{user.firstName}</li>
+                ))}
             </ul>
-     
-        <div className="list">
-
-        </div>
         </div>
     )
 }
