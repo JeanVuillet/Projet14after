@@ -1,55 +1,58 @@
-import './CreateEmployee.scss'
-import { MainData } from './MainDataComp/MainData.jsx'
-import { Address } from './AddressComp/Address.jsx';
-import { useRef } from 'react';
+import "./CreateEmployee.scss";
+import { MainData } from "./MainDataComp/MainData.jsx";
+import { Address } from "./AddressComp/Address.jsx";
+import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { mySlice } from "../../store.js";
+export function CreateEmployee() {
+  const dispatch = useDispatch();
 
-export function CreateEmployee(){
-// const dispatch=useDispatch();
+  const firstName = useRef(null);
+  const lastName = useRef(null);
+  const dateOfBirth = useRef(null);
+  const starteDate = useRef(null);
+  const street = useRef(null);
+  const city = useRef(null);
+  const state = useRef(null);
+  const zip = useRef(null);
+  const departement = useRef(null);
+  function getData() {
+    return {
+      firstName: firstName.current.value,
+      lastName: lastName.current.value,
+      dateOfBirth: dateOfBirth.current.value,
+      street: street.current.value,
+      city: city.current.value,
+      state: state.current.value,
+      zip: zip.current.value,
+      departement: departement.current.value,
+    };
+  }
 
-        const firstName = useRef(null);
-        const lastName = useRef(null);
-        const dateOfBirth = useRef(null);
-        const stateData=useRef(null)
-        const starteDate = useRef(null);
-        const street= useRef(null);
-        const city=useRef(null);
-        const state=useRef(null);
-        const zip=useRef(null);
-        const departement=useRef(null);
-        function getData() {
-            return {
-                firstName: firstName.current.value,
-                lastName: lastName.current.value,
-                dateOfBirth: dateOfBirth.current.value,
-                stateData: stateData.cirremt.value,
-                street:street.current.value,
-                city:city.current.value,
-                state:state.current.value,
-                zip:zip.current.value,
-                departement:departement.current.value,
-            };
-        }
+  function createUser() {
+    const newUser = getData();
+    dispatch(mySlice.actions.addUser(newUser));
+  }
 
-        function createUser(){
-const newUser= getData();
-
-        }
-    
-    return(
-     
-        <div className="createEmployee">Create Employee
-        <div className="emplyeDiv">
-        <form className='form'>
-    <MainData firstName={firstName} lastName={lastName} dateOfBirth={dateOfBirth} stateDate={starteDate}/>
-    <Address stateData={stateData} street={street} city={city} state={state} zip={zip}/>
-    <div className="departement">
-        <label htmlFor="departement">Departement</label>
-        <input type="text" id='departement' ref={departement}/>
-    </div>
+  return (
+    <div className="createEmployee">
+      Create Employee
+      <div className="emplyeDiv">
+        <form className="form">
+          <MainData
+            firstName={firstName}
+            lastName={lastName}
+            dateOfBirth={dateOfBirth}
+            stateDate={starteDate}
+          />
+          <Address street={street} city={city} state={state} zip={zip} />
+          <div className="departement">
+            <label htmlFor="departement">Departement</label>
+            <input type="text" id="departement" ref={departement} />
+          </div>
         </form>
         <button onClick={createUser}> validate</button>
-        </div>
-        </div>
-   
-    )
+      </div>
+    </div>
+  );
 }

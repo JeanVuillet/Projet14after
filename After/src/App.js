@@ -5,7 +5,7 @@ import { EmployeeList } from "./Pages/EmployeeListPage/EmployeeList";
 import { CreateEmployee } from "./Pages/CreateEmployeePage/CreateEmployee";
 import { MainNav } from "./Components/MainNavComp/MainNav";
 import { Provider } from "react-redux";
-import { store } from "./store.js";
+import { store } from "./store";
 
 function App() {
   return (
