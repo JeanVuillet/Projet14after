@@ -44,3 +44,12 @@
         gap:10px;
     }
 }
+
+.custom-date-picker {
+    .MuiInputBase-root.MuiOutlinedInput-root {
+        height: 21.5px;
+      .MuiPickersDay-day {
+     // Modifier la hauteur des lignes de dates
+      }
+    }
+  }

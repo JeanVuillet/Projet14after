@@ -6,6 +6,7 @@ import { CreateEmployee } from "./Pages/CreateEmployeePage/CreateEmployee";
 import { MainNav } from "./Components/MainNavComp/MainNav";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import 'react-datetime-picker/dist/DateTimePicker.css';
 
 function App() {
   return (
