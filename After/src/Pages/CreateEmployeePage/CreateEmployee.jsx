@@ -13,7 +13,8 @@ import dayjs from 'dayjs';
 export function CreateEmployee() {
   const [validDivOpen, setValidDiv]=useState(false)
 
-  const [dateOfBirth, setDateOfBirth] = useState(dayjs());
+  const [dateOfBirth, setDateOfBirth] = useState(null);
+  const[startDate, setStartDate]=useState(null);
 
   let dateBirthValue=null;
   const dispatch = useDispatch();
@@ -22,7 +23,6 @@ export function CreateEmployee() {
   const firstName = useRef(null);
   const lastName = useRef(null);
 
-  const startDate = useRef(null);
   const street = useRef(null);
   const city = useRef(null);
   const state = useRef(null);
@@ -36,12 +36,13 @@ export function CreateEmployee() {
       firstName: firstName.current.value,
       lastName: lastName.current.value,
       dateOfBirth: dateOfBirth,
-      startDate:startDate.current.value,
+      startDate:startDate,
       street: street.current.value,
       city: city.current.value,
       state: state.current.value,
       zip: zip.current.value,
       departement: departement.current.value,
+     
     };
   }
 
@@ -67,7 +68,7 @@ export function CreateEmployee() {
             firstName={firstName}
             lastName={lastName}
             setDateOfBirth={setDateOfBirth}
-            startDate={startDate}
+            setStartDate={setStartDate}
             dateBirthValue={dateBirthValue}
           />
           <Address street={street} city={city} state={state} zip={zip} />

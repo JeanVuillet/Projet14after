@@ -37,7 +37,7 @@ export function EmployeeList(){
                     <td key={index}>{user.city}</td>
                     <td key={index}>{user.state}</td>
                     <td key={index}>{user.zip}</td>
-                    <td key={index}>{user.department}</td>
+                    <td key={index}>{user.departement}</td>
                     </tr>
                 ))}
             </tbody>

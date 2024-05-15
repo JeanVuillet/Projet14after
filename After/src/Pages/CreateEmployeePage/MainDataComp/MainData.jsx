@@ -1,13 +1,12 @@
 import './MainData.scss';
-import { DateSelector } from '../../../Components/DateSelectorComp/DateSelector';
 import { DatePicker } from '@mui/x-date-pickers';
 import dayjs from 'dayjs';
 
 
-export function MainData({firstName, lastName,setDateOfBirth, startDate}) {
+export function MainData({firstName, lastName,setDateOfBirth, setStartDate}) {
 
 
-    const handleDateChange = (newDate) => {
+    const dateOfBirthChange = (newDate) => {
   
       // Vous pouvez faire quelque chose avec la nouvelle date sélectionnée
       const formattedDate = dayjs(newDate).format('DD.MM.YYYY');
@@ -15,7 +14,10 @@ export function MainData({firstName, lastName,setDateOfBirth, startDate}) {
      
 
     };
-
+    const startDateChange=(date)=>{
+        const formattedDate = dayjs(date).format('DD.MM.YYYY');
+        setStartDate(formattedDate)
+    }
     return (
         <div className="mainData">
             <div className="firstName">
@@ -28,12 +30,11 @@ export function MainData({firstName, lastName,setDateOfBirth, startDate}) {
             </div>
             <div className="dateOfBirth">
                 <label htmlFor='dateOfBirth' placeholder='mm/dd/yyyy' >Date of Birth</label>
-                 <DatePicker      label="Sélectionnez une date" 
-      onChange={handleDateChange}  className='custom-date-picker'/>
+                 <DatePicker  onChange={dateOfBirthChange}  className='custom-date-picker'/>
             </div>
             <div className="startDate">
                 <label htmlFor='startDate' placeholder='mm/dd/yyyy' >Start Date</label>
-                <DatePicker ref={startDate} className='custom-date-picker'/>
+                <DatePicker onChange={startDateChange} className='custom-date-picker'/>
             </div>
         </div>
     );
