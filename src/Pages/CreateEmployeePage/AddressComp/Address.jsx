@@ -1,10 +1,17 @@
 import './Address.scss'
 import React from 'react'
 import Select from 'react-select'
+import states from './../../../Assets/states.json';
 
-export function Address({ street,city, state, zip }){
+export function Address({ street,city, setState, zip }){
 
-    
+    const options= states;
+    const stateNames=states.map((states)=>({value:states.value , label:states.value}))
+
+
+  function  handleStateChange(selectedOption){
+setState(selectedOption.value)
+    }
     return(
         <div className="adress">
         <p className='adressTitle'>Adress</p>
@@ -20,7 +27,7 @@ export function Address({ street,city, state, zip }){
             </div>
             <div className="stateDiv">
                 <label htmlFor='state'>State</label>
-                <input type="text"  id='state' ref={state}/>
+          <Select options={options} onChange={handleStateChange}/>
             </div>
             <div className="zipCode">
                 <label htmlFor='zip'>Zip Code</label>

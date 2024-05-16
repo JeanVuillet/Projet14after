@@ -15,6 +15,7 @@ export function CreateEmployee() {
 
   const [dateOfBirth, setDateOfBirth] = useState(null);
   const[startDate, setStartDate]=useState(null);
+  const [state, setState]=useState(null)
 
   let dateBirthValue=null;
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ export function CreateEmployee() {
 
   const street = useRef(null);
   const city = useRef(null);
-  const state = useRef(null);
+
   const zip = useRef(null);
   const departement = useRef(null);
   function getData() {
@@ -39,7 +40,7 @@ export function CreateEmployee() {
       startDate:startDate,
       street: street.current.value,
       city: city.current.value,
-      state: state.current.value,
+      state: state,
       zip: zip.current.value,
       departement: departement.current.value,
      
@@ -71,7 +72,7 @@ export function CreateEmployee() {
             setStartDate={setStartDate}
             dateBirthValue={dateBirthValue}
           />
-          <Address street={street} city={city} state={state} zip={zip} />
+          <Address street={street} city={city} setState={setState} zip={zip} />
           <div className="departement">
             <label htmlFor="departement">Departement</label>
             <input type="text" id="departement" ref={departement} />
