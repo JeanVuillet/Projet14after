@@ -33,5 +33,25 @@ gap: 50px;
         color:green;
         background-color: wheat;
     }
+
+   
 }
+}
+.validDiv{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    color: red;
+    top:50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    button{
+        width:30%;
+        height: auto;
+    }
 }

@@ -1,0 +1,17 @@
+ pour la modale creer  un styleComponent
+
+il faut publier la modale sur npm
+il faut creer un repository dedie a la modale et il faut la pakage sur npm
+
+puis importer la modale cree et stocker sur npm comme une modale etrangere
+
+publier le projet sur netlify ou versel
+
+attention aux noms de fichiers sinon sa marche pas
+comment creer un composant npm creer le syteme de composant npm et mettre dedqns le composqnt
+
+
+
+https://blog.openreplay.com/creating-easy-custom-modals-with-react/
+
+localStorage
