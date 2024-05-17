@@ -71,6 +71,7 @@ export function CreateEmployee() {
     dispatch(mySlice.actions.addUser(newUser));
     form.current.reset()
     setValidDiv(true);
+    setDepartement(null);
 
     }
 

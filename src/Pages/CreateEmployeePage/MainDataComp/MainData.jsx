@@ -6,9 +6,7 @@ import { useEffect } from 'react';
 
 
 export function MainData({firstName, lastName, setDateOfBirth,  setStartDate, startDate, dateOfBirth, datesFilled}) {
-console.log( 'dateofBirth'+dateOfBirth)
-console.log('startDate'+startDate)
-console.log('dataFIlled'+datesFilled)
+
 
 
     const dateOfBirthChange = (newDate) => {
