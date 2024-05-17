@@ -7,17 +7,23 @@ import { mySlice } from "../../store.js";
 import { useState } from "react";
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import React from 'react'
+import Select from 'react-select'
+import departementList from './../../Assets/departements.json'
+import { useEffect } from "react";
 
-
-import dayjs from 'dayjs';
 export function CreateEmployee() {
+
   const [validDivOpen, setValidDiv]=useState(false)
 
-  const [dateOfBirth, setDateOfBirth] = useState(null);
-  const[startDate, setStartDate]=useState(null);
+  const [dateOfBirth, setDateOfBirth] = useState(false);
+  const[startDate, setStartDate]=useState(false);
+  const [datesFilled, setDatesFilled]=useState(true);
   const [state, setState]=useState(null)
+  const [departement, setDepartement]=useState(null);
 
-  let dateBirthValue=null;
+
+
   const dispatch = useDispatch();
 
   const form=useRef(null)
@@ -28,10 +34,10 @@ export function CreateEmployee() {
   const city = useRef(null);
 
   const zip = useRef(null);
-  const departement = useRef(null);
+
+
+
   function getData() {
-
-
 
     return {
       firstName: firstName.current.value,
@@ -42,19 +48,35 @@ export function CreateEmployee() {
       city: city.current.value,
       state: state,
       zip: zip.current.value,
-      departement: departement.current.value,
+      departement:departement,
      
     };
   }
 
+  // const newDepertementList=departementList.map((states)=>({value:states.value , label:states.value}))
+  
+  function selectDepartement(selectedOption){
+  setDepartement(selectedOption.value)
+  }
+
   function createUser(event) {
     event.preventDefault();
+
+    setDatesFilled(false)
    
     const newUser = getData();
+
+    if (newUser.startDate && newUser.dateOfBirth){
+      setDatesFilled(true)
     dispatch(mySlice.actions.addUser(newUser));
     form.current.reset()
     setValidDiv(true);
+
+    }
+
+
   }
+  
   function closeModal(){
     setValidDiv(false);
   }
@@ -70,12 +92,15 @@ export function CreateEmployee() {
             lastName={lastName}
             setDateOfBirth={setDateOfBirth}
             setStartDate={setStartDate}
-            dateBirthValue={dateBirthValue}
+        
+            startDate={startDate}
+            dateOfBirth={dateOfBirth}
+            datesFilled={datesFilled} 
+       
           />
           <Address street={street} city={city} setState={setState} zip={zip} />
           <div className="departement">
-            <label htmlFor="departement">Departement</label>
-            <input type="text" id="departement" ref={departement} />
+       <Select options={departementList} onChange={ selectDepartement} required/>
           </div>
           
         </div>
