@@ -1,0 +1,34 @@
+.employeList{
+    border:solid;
+
+
+    .table{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:20px;
+        border:solid;
+        padding-top: 30px;
+    
+
+        .finder{
+            padding-left: 40px;
+            display: flex;
+            gap: 15px;
+
+            input{
+                border:solid;
+            }
+        }
+        .dataTable{
+            min-height: 260px;
+        }
+        .sc-cwHqhk.kzZBXj {
+
+  font-weight: bold;
+  white-space: pre-wrap;
+          }
+
+    }
+}
+

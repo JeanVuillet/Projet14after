@@ -1,3 +1,24 @@
 .mainNav{
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .logoDiv{
+        display: flex;
+        border:solid;
+        align-items: center;
+        gap: 10px;
+
+
+    }
+    .pageName{
+        color:rgb(49, 108, 49);
+        font-size: 20px;
+    }
+    .link{
+text-decoration: none;
+color: black;
+padding-right: 5px;
+    }
 }
+

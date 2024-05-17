@@ -33,22 +33,22 @@ if(! e.target.value)
 
 const columns = [
 	{
-		name: 'FirstName',
+		name: 'First Name',
 		selector: row => row.firstName,
         sortable:true
 	},
 	{
-		name: 'LastName',
+		name: 'Last Name',
 		selector: row => row.lastName,
         sortable:true
 	},
     {
-		name: 'DateOfBirth',
+		name: 'Date of birth',
 		selector: row => row.dateOfBirth,
         sortable:true
 	},
     {
-		name: 'StartDate',
+		name: 'Start date',
 		selector: row => row.startDate,
         sortable:true
 	},
@@ -84,16 +84,20 @@ const data = userList;
 
 
 	return (
-        <>
-        <div className="finder">
-            <label>find User</label>
-            <input onChange={FindName}></input>
+        <div className="employeList">
+            <h2>Liste des employes</h2>
+            <div className="table">
+                <div className="finder">
+                    <label>find User</label>
+                    <input onChange={FindName}></input>
+                </div>
+                <DataTable
+                    columns={columns}
+                    data={records}
+                    className='dataTable'
+                />
+            </div>
         </div>
-		<DataTable
-			columns={columns}
-			data={records}
-		/>
-        </>
 	);
 };
 
