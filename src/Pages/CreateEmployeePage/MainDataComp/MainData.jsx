@@ -15,14 +15,18 @@ console.log('dataFIlled'+datesFilled)
   
       // Vous pouvez faire quelque chose avec la nouvelle date sélectionnée
       const formattedDate = dayjs(newDate).format('DD.MM.YYYY');
-      setDateOfBirth(formattedDate);
+      if (formattedDate !=='Invalid Date'){
+      setDateOfBirth(formattedDate)}
+      else{setDateOfBirth(null)};
 
      
 
     };
     const startDateChange=(date)=>{
         const formattedDate = dayjs(date).format('DD.MM.YYYY');
-        setStartDate(formattedDate)
+        if (formattedDate !=='Invalid Date')
+        {setStartDate(formattedDate)}
+        else{setStartDate(null)}
 
 
     }
@@ -38,13 +42,13 @@ console.log('dataFIlled'+datesFilled)
             </div>
             <div className="dateOfBirth">
                 <label htmlFor='dateOfBirth' placeholder='mm/dd/yyyy' >Date of Birth</label>
-                 <DatePicker  onChange={dateOfBirthChange}  className='custom-date-picker' required/>
-                 { ( dateOfBirth || datesFilled) ?'':<div>select date of birth </div>}
+                 <DatePicker  onChange={dateOfBirthChange}  className='custom-date-picker' placeholder='dd/mm/yyyy'/>
+                 { (dateOfBirth || datesFilled) ?'':<div>select date of birth </div>}
             </div>
             <div className="startDate">
                 <label htmlFor='startDate' placeholder='mm/dd/yyyy' >Start Date</label>
-                <DatePicker onChange={startDateChange} className='custom-date-picker' required/>
-                { (startDate || datesFilled) ?'':<div>select start date </div>}
+                <DatePicker onChange={startDateChange} className='custom-date-picker' placeholder='dd/mm/yyyy' />
+                { (startDate  || datesFilled) ?'':<div>select start date </div>}
             </div>
         </div>
     );
