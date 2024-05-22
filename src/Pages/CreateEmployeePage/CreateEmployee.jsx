@@ -11,7 +11,8 @@ import React from 'react'
 import Select from 'react-select'
 import departementList from './../../Assets/departements.json'
 import { useEffect } from "react";
-import MyModal from 'jeansmodal'
+import MyModal from './Modalcomp.jsx'
+
 
 export function CreateEmployee() {
 
@@ -86,6 +87,7 @@ const containerObject={
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <MyModal/>
     <div className="createEmployee">
       Create Employee
       <form className="form" onSubmit={createUser} ref={form}>
@@ -109,7 +111,7 @@ const containerObject={
         </div>
         <button type='submit' className="validButton"> validate</button>
       </form>
-<MyModal isOpen={isOpen} setIsOpen={setIsOpen} modalMessage='coucou' containerObject={containerObject} buttonMessage='bouton'></MyModal>
+<MyModal/>
     </div>
     </LocalizationProvider>
   );
