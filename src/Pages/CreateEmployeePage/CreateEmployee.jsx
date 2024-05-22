@@ -36,7 +36,10 @@ export function CreateEmployee() {
 
   const zip = useRef(null);
 
-
+const containerObject={
+  color:'red',
+  backgroundColor:'blue'
+}
 
   function getData() {
 
@@ -106,7 +109,7 @@ export function CreateEmployee() {
         </div>
         <button type='submit' className="validButton"> validate</button>
       </form>
-<MyModal isOpen={isOpen} setIsOpen={setIsOpen} modalMessage='coucou' buttonMessage='bouton'></MyModal>
+<MyModal isOpen={isOpen} setIsOpen={setIsOpen} modalMessage='coucou' containerObject={containerObject} buttonMessage='bouton'></MyModal>
     </div>
     </LocalizationProvider>
   );
