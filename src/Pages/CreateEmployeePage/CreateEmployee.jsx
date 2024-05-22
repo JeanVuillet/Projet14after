@@ -11,10 +11,11 @@ import React from 'react'
 import Select from 'react-select'
 import departementList from './../../Assets/departements.json'
 import { useEffect } from "react";
+import MyModal from 'jeansmodal'
 
 export function CreateEmployee() {
 
-  const [validDivOpen, setValidDiv]=useState(false)
+  const [isOpen, setIsOpen]=useState(false)
 
   const [dateOfBirth, setDateOfBirth] = useState(false);
   const[startDate, setStartDate]=useState(false);
@@ -70,7 +71,7 @@ export function CreateEmployee() {
       setDatesFilled(true)
     dispatch(mySlice.actions.addUser(newUser));
     form.current.reset()
-    setValidDiv(true);
+ setIsOpen(true);
     setDepartement(null);
 
     }
@@ -78,9 +79,7 @@ export function CreateEmployee() {
 
   }
   
-  function closeModal(){
-    setValidDiv(false);
-  }
+
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -107,10 +106,7 @@ export function CreateEmployee() {
         </div>
         <button type='submit' className="validButton"> validate</button>
       </form>
-      <div className="validDiv" style={ validDivOpen? { display:'flex'}:{display:'none'}}>
-        L'utilisateur a ete cree. Bravo !
-        <button onClick={closeModal}>Merci</button>
-      </div>
+<MyModal isOpen={isOpen} setIsOpen={setIsOpen} modalMessage='coucou' buttonMessage='bouton'></MyModal>
     </div>
     </LocalizationProvider>
   );
