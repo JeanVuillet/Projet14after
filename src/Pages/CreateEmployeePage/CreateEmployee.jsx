@@ -76,6 +76,7 @@ const containerObject={
     dispatch(mySlice.actions.addUser(newUser));
     form.current.reset()
  setIsOpen(true);
+
     setDepartement(null);
 
     }
@@ -87,7 +88,7 @@ const containerObject={
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <MyModal/>
+   
     <div className="createEmployee">
       Create Employee
       <form className="form" onSubmit={createUser} ref={form}>
@@ -111,7 +112,7 @@ const containerObject={
         </div>
         <button type='submit' className="validButton"> validate</button>
       </form>
-<MyModal/>
+<MyModal open={isOpen}/>
     </div>
     </LocalizationProvider>
   );
