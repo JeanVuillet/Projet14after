@@ -11,12 +11,13 @@ import React from 'react'
 import Select from 'react-select'
 import departementList from './../../Assets/departements.json'
 import { useEffect } from "react";
-import MyModal from './Modalcomp.jsx'
+import Modal from './Modalcomp.jsx'
 
 
 export function CreateEmployee() {
 
-  const [isOpen, setIsOpen]=useState(false)
+  const [isChanged, setIsChanged]=useState(false)
+  const [isOpen, setIsOpen]=useState(false);
 
   const [dateOfBirth, setDateOfBirth] = useState(false);
   const[startDate, setStartDate]=useState(false);
@@ -75,7 +76,8 @@ const containerObject={
       setDatesFilled(true)
     dispatch(mySlice.actions.addUser(newUser));
     form.current.reset()
- setIsOpen(true);
+  setIsChanged(prevValue=>!prevValue);
+  setIsOpen(true);
 
     setDepartement(null);
 
@@ -112,7 +114,7 @@ const containerObject={
         </div>
         <button type='submit' className="validButton"> validate</button>
       </form>
-<MyModal open={isOpen}/>
+       <Modal change={isChanged} setIsOpen={setIsOpen} modalMessage={'utilisateur créé !'} buttonMessage={'merci'}/>
     </div>
     </LocalizationProvider>
   );
