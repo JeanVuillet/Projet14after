@@ -80,7 +80,8 @@ const containerObject={
   setIsOpen(true);
 
     setDepartement(null);
-
+ setDateOfBirth(null);
+ setStartDate(null)
     }
 
 
