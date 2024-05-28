@@ -85,7 +85,7 @@ const data = userList;
 
 	return (
         <div className="employeList">
-            <h2>Liste des employes</h2>
+            <h1>Liste des employes</h1>
             <div className="table">
                 <div className="finder">
                     <label>find User</label>

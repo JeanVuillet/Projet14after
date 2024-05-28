@@ -92,7 +92,8 @@ const containerObject={
     <LocalizationProvider dateAdapter={AdapterDayjs}>
    
     <div className="createEmployee">
-      Create Employee
+      <h1> Create Employee</h1>
+     
       <form className="form" onSubmit={createUser} ref={form}>
         <div className="employeDiv"  >
           <MainData
@@ -108,11 +109,15 @@ const containerObject={
           />
           <Address street={street} city={city} setState={setState} zip={zip} />
           <div className="departement">
-       <Select options={departementList} onChange={ selectDepartement} required/>
-          </div>
-          
+           <p className="departementTitle"> departement</p>
+           <div className="selector">
+       <Select options={departementList} onChange={ selectDepartement} required />
+       </div>
+          </div>      
         </div>
+        <div className="buttonDiv">
         <button type='submit' className="validButton"> validate</button>
+        </div>
       </form>
        <Modal change={isChanged} setIsOpen={setIsOpen} modalMessage={'utilisateur créé !'} buttonMessage={'merci'}/>
     </div>

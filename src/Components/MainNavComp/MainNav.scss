@@ -1,19 +1,25 @@
 .mainNav{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    font-size: small;
+    border:solid;
 
     .logoDiv{
         display: flex;
-        border:solid;
+      
         align-items: center;
         gap: 10px;
-
+        margin-left: 5%;
+      img{
+        height: 50px;
+      }
 
     }
     .pageName{
         color:rgb(49, 108, 49);
         font-size: 20px;
+        font-weight: bold;
     }
     .link{
 text-decoration: none;
