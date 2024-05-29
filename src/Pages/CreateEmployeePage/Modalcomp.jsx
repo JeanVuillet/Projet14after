@@ -37,9 +37,6 @@ function MyModal({  isOpen, setIsOpen, containerObject, modalObject, buttonObjec
 
   const [isChanged, setIsChanged] = useState(false);
 
-  useEffect(() => {
-    setIsChanged(prevValue => !prevValue);
-  }, [change]);
 
   function closeModal() {
     if (isChanged) {
