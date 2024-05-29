@@ -35,11 +35,10 @@ function MyModal({  change, isOpen, setIsOpen, containerObject, modalObject, but
     ${buttonObject}
   `;
 
-  const [isChanged, setIsChanged] = useState(change);
+  const [isChanged, setIsChanged] = useState(false);
 
   useEffect(() => {
-    
-    setIsChanged(change);
+   setIsChanged(value=>!value)
   }, [change]);
 
   function closeModal() {
