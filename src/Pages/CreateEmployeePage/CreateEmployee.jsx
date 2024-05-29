@@ -11,7 +11,7 @@ import React from "react";
 import Select from "react-select";
 import departmentList from "./../../Assets/departments.json";
 import { useEffect } from "react";
-import Modal from "./Modalcomp.jsx";
+import Modal from "mymodal4";
 
 export function CreateEmployee() {
   const [isChanged, setIsChanged] = useState(false);
@@ -131,6 +131,6 @@ export function CreateEmployee() {
         />
       </div>
     </LocalizationProvider>
-    //last 31
+    //last 32
   );
 }

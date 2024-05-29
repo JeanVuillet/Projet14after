@@ -58,7 +58,7 @@ function MyModal({  change, isOpen, setIsOpen, containerObject, modalObject, but
         {buttonMessage ? buttonMessage : 'OK'}
       </ModalButton>
     </ModalContainer>
-    //better
+
   );
 }
 
