@@ -38,6 +38,7 @@ function MyModal({  change, isOpen, setIsOpen, containerObject, modalObject, but
   const [isChanged, setIsChanged] = useState(change);
 
   useEffect(() => {
+    
     setIsChanged(change);
   }, [change]);
 
