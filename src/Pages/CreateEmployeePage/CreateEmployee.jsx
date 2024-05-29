@@ -122,10 +122,10 @@ export function CreateEmployee() {
             </button>
           </div>
         </form>
-        <Modal
+       <Modal style={isChanged?{display:'flex'}:{display:'non'}}
           // isOpen={isOpen}
           // setIsOpen={setIsOpen}
-          change={false}
+          change={isChanged}
           modalMessage={"Employee created !"}
           buttonMessage={"OK"}
         />
