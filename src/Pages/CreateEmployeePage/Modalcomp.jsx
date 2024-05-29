@@ -66,9 +66,9 @@ MyModal.propTypes = {
   change: PropTypes.bool.isRequired,
   isOpen: PropTypes.bool.isRequired,
   setIsOpen: PropTypes.func.isRequired,
-  containerObject: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  modalObject: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  buttonObject: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  containerObject: PropTypes.object,
+  modalObject: PropTypes.object,
+  buttonObject: PropTypes.object,
   modalMessage: PropTypes.string,
   buttonMessage: PropTypes.string,
 };
