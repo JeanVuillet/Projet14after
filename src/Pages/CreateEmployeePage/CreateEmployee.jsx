@@ -125,7 +125,7 @@ export function CreateEmployee() {
         <Modal
           // isOpen={isOpen}
           // setIsOpen={setIsOpen}
-          change={isChanged}
+          change={false}
           modalMessage={"Employee created !"}
           buttonMessage={"OK"}
         />
