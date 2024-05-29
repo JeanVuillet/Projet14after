@@ -123,8 +123,8 @@ export function CreateEmployee() {
           </div>
         </form>
         <Modal
-          change={isChanged}
-          // setIsOpen={setIsOpen}
+        isOpen={isOpen}
+          setIsOpen={setIsOpen}
           modalMessage={"Employee created !"}
           buttonMessage={"OK"}
         />
