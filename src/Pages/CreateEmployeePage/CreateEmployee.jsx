@@ -122,13 +122,13 @@ export function CreateEmployee() {
             </button>
           </div>
         </form>
-       {/* <Modal
+       <Modal
           isOpen={false}
           // setIsOpen={setIsOpen}
           change={false}
           modalMessage={"Employee created !"}
           buttonMessage={"OK"}
-        /> */}
+        />
       </div>
     </LocalizationProvider>
     //last 40

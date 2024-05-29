@@ -8008,10 +8008,10 @@ mymodal2@^0.0.1:
     react-dom "^18.2.0"
     styled-components "^6.1.11"
 
-mymodal4@^33.0.0:
-  version "33.0.0"
-  resolved "https://registry.npmjs.org/mymodal4/-/mymodal4-33.0.0.tgz"
-  integrity sha512-lR1gsBE39dnNcB0lAR9YpQXl+ZdVi5DoWho172BnMBuiuna8ymjTx80rsjPm94XABpfX3dL88TklA+ryVHXSbg==
+mymodal4@^33.1.0:
+  version "33.1.0"
+  resolved "https://registry.npmjs.org/mymodal4/-/mymodal4-33.1.0.tgz"
+  integrity sha512-axGvluhQojTuRZGLdf4VsrW0bYJ7W9jJ3zpdIryVX+IIR9gGmdhKM2dWbO0hCmlhwwOPOcdKzMrRKMMjAmPd5Q==
   dependencies:
     styled-components "^6.1.11"
 
