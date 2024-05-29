@@ -13,12 +13,13 @@
     }
 .addressContent{
     border: solid;
- width: 100%;
- height: 80%;
+    width: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding-bottom: 10%;
 
     label{
         width: 80%;}

@@ -3,14 +3,17 @@ import React from 'react'
 import Select from 'react-select'
 import states from './../../../Assets/states.json';
 
-export function Address({ street,city, setState, zip }){
+
+export function Address({ street,city, state,setState, zip }){
+
+
 
     const options= states;
-    const stateNames=states.map((states)=>({value:states.value , label:states.value}))
+    // const stateNames=states.map((states)=>({value:states.value , label:states.value}))
 
 
   function  handleStateChange(selectedOption){
-setState(selectedOption.value)
+setState(selectedOption)
     }
     return(
         <div className="adress">
@@ -27,7 +30,7 @@ setState(selectedOption.value)
             </div>
             <div className="stateDiv">
                 <label htmlFor='state'>State</label>
-          <Select options={options} onChange={handleStateChange} required/>
+          <Select value={state} options={options} onChange={handleStateChange} required/>
             </div>
             <div className="zipCode">
                 <label htmlFor='zip'>Zip Code</label>

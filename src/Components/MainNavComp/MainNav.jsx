@@ -14,8 +14,8 @@ export function MainNav(){
         </div>
         <p className='pageName'>HRnet</p>
         <nav>
-        <NavLink to='/createEmployee'  className='link'> Creer un employé</NavLink>
-        <NavLink to='/employeeList' className='link'> Liste des employés</NavLink>
+        <NavLink to='/createEmployee'  className='link'> Create an employee</NavLink>
+        <NavLink to='/employeeList' className='link'> List of employees</NavLink>
         </nav>
         </div>
         </>

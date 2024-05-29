@@ -5,31 +5,27 @@ import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { mySlice } from "../../store.js";
 import { useState } from "react";
-import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import React from 'react'
-import Select from 'react-select'
-import departementList from './../../Assets/departements.json'
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import React from "react";
+import Select from "react-select";
+import departmentList from "./../../Assets/departments.json";
 import { useEffect } from "react";
-import Modal from './Modalcomp.jsx'
-
+import Modal from "./Modalcomp.jsx";
 
 export function CreateEmployee() {
-
-  const [isChanged, setIsChanged]=useState(false)
-  const [isOpen, setIsOpen]=useState(false);
+  const [isChanged, setIsChanged] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const [dateOfBirth, setDateOfBirth] = useState(false);
-  const[startDate, setStartDate]=useState(false);
-  const [datesFilled, setDatesFilled]=useState(true);
-  const [state, setState]=useState(null)
-  const [departement, setDepartement]=useState(null);
-
-
+  const [startDate, setStartDate] = useState(false);
+  const [datesFilled, setDatesFilled] = useState(true);
+  const [state, setState] = useState(null);
+  const [department, setdepartment] = useState(null);
 
   const dispatch = useDispatch();
 
-  const form=useRef(null)
+  const form = useRef(null);
   const firstName = useRef(null);
   const lastName = useRef(null);
 
@@ -38,90 +34,101 @@ export function CreateEmployee() {
 
   const zip = useRef(null);
 
-const containerObject={
-  color:'red',
-  backgroundColor:'blue'
-}
+  const containerObject = {
+    color: "red",
+    backgroundColor: "blue",
+  };
 
   function getData() {
-
     return {
       firstName: firstName.current.value,
       lastName: lastName.current.value,
       dateOfBirth: dateOfBirth,
-      startDate:startDate,
+      startDate: startDate,
       street: street.current.value,
       city: city.current.value,
-      state: state,
+      state: state.value,
       zip: zip.current.value,
-      departement:departement,
-     
+      department: department.value,
     };
   }
 
-  // const newDepertementList=departementList.map((states)=>({value:states.value , label:states.value}))
-  
-  function selectDepartement(selectedOption){
-  setDepartement(selectedOption.value)
+  // const newDepertementList=departmentList.map((states)=>({value:states.value , label:states.value}))
+
+  function selectdepartment(selectedOption) {
+    setdepartment(selectedOption);
   }
 
   function createUser(event) {
     event.preventDefault();
 
-    setDatesFilled(false)
-   
+    setDatesFilled(false);
+
     const newUser = getData();
 
-    if (newUser.startDate && newUser.dateOfBirth){
-      setDatesFilled(true)
-    dispatch(mySlice.actions.addUser(newUser));
-    form.current.reset()
-  setIsChanged(prevValue=>!prevValue);
-  setIsOpen(true);
+    if (newUser.startDate && newUser.dateOfBirth) {
+      setDatesFilled(true);
+      dispatch(mySlice.actions.addUser(newUser));
+      form.current.reset();
+      setIsChanged((prevValue) => !prevValue);
+      setIsOpen(true);
 
-    setDepartement(null);
- setDateOfBirth(null);
- setStartDate(null)
+      setdepartment(null);
+      setDateOfBirth(null);
+      setStartDate(null);
+      setState(null);
     }
-
-
   }
-  
-
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-   
-    <div className="createEmployee">
-      <h1> Create Employee</h1>
-     
-      <form className="form" onSubmit={createUser} ref={form}>
-        <div className="employeDiv"  >
-          <MainData
-            firstName={firstName}
-            lastName={lastName}
-            setDateOfBirth={setDateOfBirth}
-            setStartDate={setStartDate}
-        
-            startDate={startDate}
-            dateOfBirth={dateOfBirth}
-            datesFilled={datesFilled} 
-       
-          />
-          <Address street={street} city={city} setState={setState} zip={zip} />
-          <div className="departement">
-           <p className="departementTitle"> departement</p>
-           <div className="selector">
-       <Select options={departementList} onChange={ selectDepartement} required />
-       </div>
-          </div>      
-        </div>
-        <div className="buttonDiv">
-        <button type='submit' className="validButton"> validate</button>
-        </div>
-      </form>
-       <Modal change={isChanged} setIsOpen={setIsOpen} modalMessage={'utilisateur créé !'} buttonMessage={'merci'}/>
-    </div>
+      <div className="createEmployee">
+        <h1> Create Employee</h1>
+
+        <form className="form" onSubmit={createUser} ref={form}>
+          <div className="employeDiv">
+            <MainData
+              firstName={firstName}
+              lastName={lastName}
+              setDateOfBirth={setDateOfBirth}
+              setStartDate={setStartDate}
+              startDate={startDate}
+              dateOfBirth={dateOfBirth}
+              datesFilled={datesFilled}
+            />
+            <Address
+              street={street}
+              city={city}
+              state={state}
+              setState={setState}
+              zip={zip}
+            />
+            <div className="department">
+              <p className="departmentTitle"> Department</p>
+              <div className="selector">
+                <Select
+                  value={department}
+                  options={departmentList}
+                  onChange={selectdepartment}
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div className="buttonDiv">
+            <button type="submit" className="validButton">
+              {" "}
+              validate
+            </button>
+          </div>
+        </form>
+        <Modal
+          change={isChanged}
+          setIsOpen={setIsOpen}
+          modalMessage={"Employee created !"}
+          buttonMessage={"OK"}
+        />
+      </div>
     </LocalizationProvider>
   );
 }
