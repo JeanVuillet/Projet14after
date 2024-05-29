@@ -122,15 +122,15 @@ export function CreateEmployee() {
             </button>
           </div>
         </form>
-       <Modal style={isChanged?{display:'flex'}:{display:'non'}}
-          // isOpen={isOpen}
+       {/* <Modal
+          isOpen={false}
           // setIsOpen={setIsOpen}
-          change={isChanged}
+          change={false}
           modalMessage={"Employee created !"}
           buttonMessage={"OK"}
-        />
+        /> */}
       </div>
     </LocalizationProvider>
-    //last 39
+    //last 40
   )
 }
