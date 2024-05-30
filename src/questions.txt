@@ -15,3 +15,9 @@ comment creer un composant npm creer le syteme de composant npm et mettre dedqns
 https://blog.openreplay.com/creating-easy-custom-modals-with-react/
 
 localStorage
+
+faire une 404 pour les faux url
+
+les rapports de perf
+
+utiliser jsDoc en tete du composant en 1 ligne

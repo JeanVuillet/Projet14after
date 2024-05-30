@@ -10,11 +10,11 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import React from "react";
 import Select from "react-select";
 import departmentList from "./../../Assets/departments.json";
-import { useEffect } from "react";
+
 import Modal from "mymodal4";
 
 export function CreateEmployee() {
-  const [isChanged, setIsChanged] = useState(false);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const [dateOfBirth, setDateOfBirth] = useState(false);
@@ -37,6 +37,7 @@ export function CreateEmployee() {
   const containerObject = {
     color: "red",
     backgroundColor: "blue",
+
   };
 
   function getData() {
@@ -70,7 +71,7 @@ export function CreateEmployee() {
       setDatesFilled(true);
       dispatch(mySlice.actions.addUser(newUser));
       form.current.reset();
-      setIsChanged((prevValue) => !prevValue);
+
       setIsOpen(true);
 
       setdepartment(null);
@@ -123,11 +124,11 @@ export function CreateEmployee() {
           </div>
         </form>
        <Modal
-          // isOpen={false}
-          // setIsOpen={setIsOpen}
-          change={isChanged}
-          modalMessage={"Employee created !"}
-          buttonMessage={"OK"}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          modalMessage={"Bonjour Jean !"}
+          buttonMessage={"au Revoir"}
+          containerObject={containerObject}
         />
       </div>
     </LocalizationProvider>

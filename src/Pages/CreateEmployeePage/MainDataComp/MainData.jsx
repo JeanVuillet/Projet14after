@@ -1,7 +1,7 @@
 import './MainData.scss';
 import { DatePicker } from '@mui/x-date-pickers';
 import dayjs from 'dayjs';
-import { useState, useEffect } from 'react';
+
 
 export function MainData({ firstName, lastName, setDateOfBirth, setStartDate, startDate, dateOfBirth, datesFilled }) {
 

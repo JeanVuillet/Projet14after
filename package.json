@@ -2,10 +2,11 @@
   "name": "after",
   "version": "0.1.0",
   "private": true,
+  "license":"MIT",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@marialenap/my-modal": "^1.0.7",
+  
     "@mui/material": "^5.15.19",
     "@mui/x-date-pickers": "^7.5.1",
     "@reduxjs/toolkit": "^2.2.4",
@@ -13,10 +14,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "dayjs": "^1.11.11",
-    "jeanmodal2": "^0.7.2",
-    "jeansmodal": "^0.7.5",
-    "jeanworks": "^5.0.0",
-    "mymodal2": "^0.0.1",
     "mymodal4": "^35.0.0",
     "node-sass": "^9.0.0",
     "react": "^18.3.1",

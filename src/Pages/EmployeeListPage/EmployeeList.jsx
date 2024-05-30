@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { getUser } from "../../store";
 import DataTable from "react-data-table-component";
 import { useState } from "react";
-import { useEffect } from "react";
+
 
 export function EmployeeList() {
   const users = useSelector(getUser);
@@ -72,7 +72,6 @@ export function EmployeeList() {
     },
   ];
 
-  const data = userList;
 
   return (
     <div className="employeList">
