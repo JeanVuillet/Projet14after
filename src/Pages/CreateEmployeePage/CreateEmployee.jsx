@@ -11,7 +11,7 @@ import React from "react";
 import Select from "react-select";
 import departmentList from "./../../Assets/departments.json";
 
-import Modal from "@marialenap/my-modal";
+import Modal from "mymodal4";
 
 export function CreateEmployee() {
 
@@ -59,7 +59,11 @@ export function CreateEmployee() {
   function selectdepartment(selectedOption) {
     setdepartment(selectedOption);
   }
-
+  function MyComponent() {
+    const modalElement = useRef(null);
+    const buttonOpen = useRef(null);
+  }
+  
   function createUser(event) {
     event.preventDefault();
 
@@ -131,6 +135,7 @@ export function CreateEmployee() {
           // containerObject={containerObject}
         />
       </div>
+      
     </LocalizationProvider>
     //localMOdal
   )
