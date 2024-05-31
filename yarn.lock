@@ -7977,10 +7977,10 @@ multicast-dns@^7.2.5:
     dns-packet "^5.2.2"
     thunky "^1.0.2"
 
-mymodal4@^38.4.0:
-  version "38.4.0"
-  resolved "https://registry.npmjs.org/mymodal4/-/mymodal4-38.4.0.tgz"
-  integrity sha512-peKK2oAJ96x0aug8AcOhKgtgeph0J48KdKKt5b9lmz6LlOQuSC1VjLLm0arM7n/Vbkg37YIWRo0UBKX9hVidzA==
+mymodal4@^38.5.0:
+  version "38.5.0"
+  resolved "https://registry.npmjs.org/mymodal4/-/mymodal4-38.5.0.tgz"
+  integrity sha512-tp2Qg+cok62zTV6XfzmimI6nnscixJHLlwwXJ1KV3aQzJJWrZY5S24YKM804PTxZ8gzqqrkbn4EnU1LOTlGi6A==
   dependencies:
     styled-components "^6.1.11"
 
