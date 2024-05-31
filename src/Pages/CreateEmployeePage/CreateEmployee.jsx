@@ -126,7 +126,7 @@ export function CreateEmployee() {
         </form>
        <MyModal
        
-          isOpen={isOpen}
+          isOpen={false}
           setIsOpen={setIsOpen}
           modalMessage={"Bonjour Jean !"}
           buttonMessage={"au Revoir"}
@@ -135,6 +135,6 @@ export function CreateEmployee() {
       </div>
       
     </LocalizationProvider>
-    //double
+    //doubleFalse
   )
 }
