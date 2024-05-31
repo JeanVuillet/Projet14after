@@ -127,9 +127,9 @@ export function CreateEmployee() {
           </div>
         </form>
        <MyModal
-         change={change}
-          // isOpen={false}
-          // setIsOpen={setIsOpen}
+        //  change={change}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
           modalMessage={"Bonjour Jean !"}
           buttonMessage={"au Revoir"}
           containerObject={containerObject}
