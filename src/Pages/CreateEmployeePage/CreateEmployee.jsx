@@ -11,7 +11,7 @@ import React from "react";
 import Select from "react-select";
 import departmentList from "./../../Assets/departments.json";
 
-import Modal from "mymodal4";
+import Modal from "./Modalcomp.jsx";
 
 export function CreateEmployee() {
 
@@ -132,6 +132,6 @@ export function CreateEmployee() {
         />
       </div>
     </LocalizationProvider>
-    //last 37
+    //localMOdal
   )
 }
