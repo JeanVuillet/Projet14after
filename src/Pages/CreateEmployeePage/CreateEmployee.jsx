@@ -59,10 +59,7 @@ export function CreateEmployee() {
   function selectdepartment(selectedOption) {
     setdepartment(selectedOption);
   }
-  function MyComponent() {
-    const modalElement = useRef(null);
-    const buttonOpen = useRef(null);
-  }
+
   
   function createUser(event) {
     event.preventDefault();
@@ -128,15 +125,15 @@ export function CreateEmployee() {
           </div>
         </form>
        <Modal
-          // isOpen={isOpen}
-          // setIsOpen={setIsOpen}
-          // modalMessage={"Bonjour Jean !"}
-          // buttonMessage={"au Revoir"}
-          // containerObject={containerObject}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          modalMessage={"Bonjour Jean !"}
+          buttonMessage={"au Revoir"}
+          containerObject={containerObject}
         />
       </div>
       
     </LocalizationProvider>
-    //localMOdal
+    //unvisible
   )
 }
