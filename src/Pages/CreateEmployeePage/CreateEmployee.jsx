@@ -16,6 +16,7 @@ import MyModal from "doublemodal";
 export function CreateEmployee() {
 
   const [isOpen, setIsOpen] = useState(false);
+  const [change, setChange]= useState(false);
 
   const [dateOfBirth, setDateOfBirth] = useState(false);
   const [startDate, setStartDate] = useState(false);
@@ -79,6 +80,7 @@ export function CreateEmployee() {
       setDateOfBirth(null);
       setStartDate(null);
       setState(null);
+      setChange(change=>!change)
     }
   }
 
@@ -125,9 +127,9 @@ export function CreateEmployee() {
           </div>
         </form>
        <MyModal
-       
-          isOpen={false}
-          setIsOpen={setIsOpen}
+         change={change}
+          // isOpen={false}
+          // setIsOpen={setIsOpen}
           modalMessage={"Bonjour Jean !"}
           buttonMessage={"au Revoir"}
           containerObject={containerObject}
@@ -135,6 +137,6 @@ export function CreateEmployee() {
       </div>
       
     </LocalizationProvider>
-    //doubleFalse
+    //change
   )
 }
