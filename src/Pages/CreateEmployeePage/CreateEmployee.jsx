@@ -11,7 +11,7 @@ import React from "react";
 import Select from "react-select";
 import departmentList from "./../../Assets/departments.json";
 
-import Modal from "mymodal4";
+import MyModal from "mymodal4";
 
 export function CreateEmployee() {
 
@@ -124,7 +124,8 @@ export function CreateEmployee() {
             </button>
           </div>
         </form>
-       <Modal
+       <MyModal
+       
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           modalMessage={"Bonjour Jean !"}
