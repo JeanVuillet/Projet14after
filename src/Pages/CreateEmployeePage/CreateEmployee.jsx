@@ -11,7 +11,7 @@ import React from "react";
 import Select from "react-select";
 import departmentList from "./../../Assets/departments.json";
 
-import MyModal from "mymodal4";
+import MyModal from "doublemodal";
 
 export function CreateEmployee() {
 
