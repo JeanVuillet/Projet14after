@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./Pages/HomePage/Home";
 import { EmployeeList } from "./Pages/EmployeeListPage/EmployeeList";
 import { CreateEmployee } from "./Pages/CreateEmployeePage/CreateEmployee";
+import {Error} from "./Pages/Error/Error";
 import { MainNav } from "./Components/MainNavComp/MainNav";
 import { Provider } from "react-redux";
 import { store } from "./store";
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/createEmployee" element={<CreateEmployee />} />
             <Route path="/employeeList" element={<EmployeeList />} />
+            <Route path="/*" element={<Error/>} />
           </Routes>
         </Router>
         </PersistGate>
