@@ -11,7 +11,7 @@ import React from "react";
 import Select from "react-select";
 import departmentList from "./../../Assets/departments.json";
 
-import Modal from "./Modalcomp.jsx";
+import Modal from "@marialenap/my-modal";
 
 export function CreateEmployee() {
 
@@ -124,11 +124,11 @@ export function CreateEmployee() {
           </div>
         </form>
        <Modal
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          modalMessage={"Bonjour Jean !"}
-          buttonMessage={"au Revoir"}
-          containerObject={containerObject}
+          // isOpen={isOpen}
+          // setIsOpen={setIsOpen}
+          // modalMessage={"Bonjour Jean !"}
+          // buttonMessage={"au Revoir"}
+          // containerObject={containerObject}
         />
       </div>
     </LocalizationProvider>

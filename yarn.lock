@@ -1796,6 +1796,11 @@
   resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz"
   integrity sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==
 
+"@marialenap/my-modal@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/@marialenap/my-modal/-/my-modal-1.0.7.tgz"
+  integrity sha512-E+mX5n/L5/gxD1s0x7Si4/2mRy+NYU9DJqahsNLafbAJ/6bNfVQ6oW3UsYnt0f/ikRyprJLCAZBWWnVEdrgPiA==
+
 "@mui/base@^5.0.0-beta.40", "@mui/base@5.0.0-beta.40":
   version "5.0.0-beta.40"
   resolved "https://registry.npmjs.org/@mui/base/-/base-5.0.0-beta.40.tgz"
