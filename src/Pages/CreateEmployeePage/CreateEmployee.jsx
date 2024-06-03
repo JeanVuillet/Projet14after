@@ -132,7 +132,7 @@ export function CreateEmployee() {
           setIsOpen={setIsOpen}
           modalMessage={"Employee created !"}
           buttonMessage={"OK"}
-          containerObject={containerObject}
+          modalContainer={containerObject}
         />
       </div>
       
