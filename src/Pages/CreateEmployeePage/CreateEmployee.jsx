@@ -111,6 +111,7 @@ export function CreateEmployee() {
               <p className="departmentTitle"> Department</p>
               <div className="selector">
                 <Select
+                id="department"
                   value={department}
                   options={departmentList}
                   onChange={selectdepartment}
