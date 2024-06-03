@@ -44,9 +44,9 @@ export function MainData({ firstName, lastName, setDateOfBirth, setStartDate, st
         <input type="text" id='lastName' placeholder='last name' ref={lastName} required />
       </div>
       <div className="dateOfBirth">
-        <label htmlFor='dateOfBirth'>Date of Birth</label>
+        <label >Date of Birth</label>
         <DatePicker
-        id="dateOfBirth"
+       
           value={dateOfBirth? dayjs(dateOfBirth, 'DD.MM.YYYY'):null}
           onChange={dateOfBirthChange}
           renderInput={(params) => <input {...params} placeholder='dd/mm/yyyy' />}
@@ -55,9 +55,9 @@ export function MainData({ firstName, lastName, setDateOfBirth, setStartDate, st
         {(!dateOfBirth && !datesFilled) && <div>select date of birth</div>}
       </div>
       <div className="startDate">
-        <label htmlFor='startDate'>Start Date</label>
+        <label >Start Date</label>
         <DatePicker
-        id="startDate"
+
           value={startDate ? dayjs(startDate, 'DD.MM.YYYY') : null}
           onChange={startDateChange}
           renderInput={(params) => <input {...params} placeholder='dd/mm/yyyy' />}
