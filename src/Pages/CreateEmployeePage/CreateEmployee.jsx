@@ -11,7 +11,7 @@ import React from "react";
 import Select from "react-select";
 import departmentList from "./../../Assets/departments.json";
 
-import MyModal from "doublemodal";
+import MyModal from "mymodal4";
 
 export function CreateEmployee() {
 
@@ -74,13 +74,13 @@ export function CreateEmployee() {
       dispatch(mySlice.actions.addUser(newUser));
       form.current.reset();
 
-      setIsOpen(true);
 
       setdepartment(null);
       setDateOfBirth(null);
       setStartDate(null);
       setState(null);
-      setChange(change=>!change)
+      setIsOpen(true);
+      // setChange(change=>!change)
     }
   }
 
