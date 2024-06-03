@@ -9,7 +9,7 @@ export function Address({ street,city, state,setState, zip }){
 
 
     const options= states;
-    // const stateNames=states.map((states)=>({value:states.value , label:states.value}))
+
 
 
   function  handleStateChange(selectedOption){
@@ -21,8 +21,8 @@ setState(selectedOption)
         <div className="addressContent"> 
 
             <div className="street">
-            <label htmlFor='street'>Street</label>
-            <input id='street' ref={street} required></input>
+            <label htmlFor="street">Street</label>
+            <input id="street" ref={street} required></input>
             </div>
             <div className="city">
                 <label htmlFor="city">City</label>
@@ -30,7 +30,7 @@ setState(selectedOption)
             </div>
             <div className="stateDiv">
                 <label htmlFor='state'>State</label>
-          <Select value={state} options={options} onChange={handleStateChange} required/>
+          <Select id="state" value={state} options={options} onChange={handleStateChange} required/>
             </div>
             <div className="zipCode">
                 <label htmlFor='zip'>Zip Code</label>
