@@ -130,8 +130,8 @@ export function CreateEmployee() {
         //  change={change}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
-          modalMessage={"Bonjour Jean !"}
-          buttonMessage={"au Revoir"}
+          modalMessage={"Employee created !"}
+          buttonMessage={"OK"}
           containerObject={containerObject}
         />
       </div>
