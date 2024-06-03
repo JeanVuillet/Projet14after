@@ -49,7 +49,7 @@ export function MainData({ firstName, lastName, setDateOfBirth, setStartDate, st
        
           value={dateOfBirth? dayjs(dateOfBirth, 'DD.MM.YYYY'):null}
           onChange={dateOfBirthChange}
-          renderInput={(params) => <input {...params} placeholder='dd/mm/yyyy' />}
+          inputProps={{ placeholder: 'dd/mm/yyyy' }} 
           className='custom-date-picker'
         />
         {(!dateOfBirth && !datesFilled) && <div>select date of birth</div>}
@@ -60,7 +60,7 @@ export function MainData({ firstName, lastName, setDateOfBirth, setStartDate, st
 
           value={startDate ? dayjs(startDate, 'DD.MM.YYYY') : null}
           onChange={startDateChange}
-          renderInput={(params) => <input {...params} placeholder='dd/mm/yyyy' />}
+          inputProps={{ placeholder: 'dd/mm/yyyy' }} 
           className='custom-date-picker'
         />
         {(!startDate && !datesFilled) && <div>select start date</div>}
