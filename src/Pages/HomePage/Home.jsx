@@ -6,7 +6,7 @@ export function Home() {
 			<h1 className="welcom"> Welcome to HRnet</h1>
 			<p>
 				{" "}
-				bienvenu sur la page des ressources humaines de HRnet!
+				Bienvenue sur la page des ressources humaines de HRnet!
 				<br />
 				<br />
 				Vous pouvez creer un nouvel employé ou voir la liste des employés de la
