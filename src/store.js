@@ -21,7 +21,7 @@ export const mySlice = createSlice({
 	},
 });
 
-// Fonction pour obtenir l'utilisateur
+// Selector
 export function getUser(store) {
 	return store.userSlice;
 }
