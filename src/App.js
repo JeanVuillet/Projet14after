@@ -14,19 +14,7 @@ import { PersistGate } from "redux-persist/integration/react";
 function App() {
 	return (
 		<div className="App">
-			<Provider store={store}>
-				<PersistGate loading={null} persistor={persistor}>
-					<Router>
-						<MainNav />
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="/createEmployee" element={<CreateEmployee />} />
-							<Route path="/employeeList" element={<EmployeeList />} />
-							<Route path="/*" element={<Error />} />
-						</Routes>
-					</Router>
-				</PersistGate>
-			</Provider>
+
 		</div>
 	);
 }
