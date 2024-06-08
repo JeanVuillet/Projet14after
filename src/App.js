@@ -18,13 +18,10 @@ function App() {
 			<Provider store={store}>
 				<PersistGate loading={null} persistor={persistor}>
 					<Router>
-						<MainNav />
+
 						<Routes>
-							<Route path="/" element={<Home />} />
-							{/* Utilisation correcte de CreateEmployee */}
-							<Route path="/createEmployee" element={<CreateEmployee />} /> 
-							<Route path="/employeeList" element={<EmployeeList />} />
-							<Route path="/*" element={<Error />} />
+							<Route path="/" element={<CreateEmployee />} />
+					
 						</Routes>
 					</Router>
 				</PersistGate>
